@@ -26,4 +26,7 @@ class MicropostsControllerTest < ActionController::TestCase
       delete :destroy, id: microposts(:ants)
     end
   end
+  test "making a test failure example" do
+    assert_equal "YES","NO"
+  end
 end

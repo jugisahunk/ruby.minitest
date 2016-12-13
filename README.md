@@ -9,7 +9,7 @@ We made a few minor modifications for reporting purposes.
 
 ***
 
-Example branching only: **development**
+Example branching only: **topic**
 
 * Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
