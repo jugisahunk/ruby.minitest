@@ -8,19 +8,10 @@ This is the sample application for the [*Ruby on Rails Tutorial: Learn Web Devel
 We made a few minor modifications for reporting purposes. 
 
 ***
-Using Multiple Online CI Services:
 
-[![Build Status](https://travis-ci.org/testspace-samples/ruby.minitest.svg?branch=master)](https://travis-ci.org/testspace-samples/ruby.minitest)
-[![CircleCI](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master.svg?style=svg)](https://circleci.com/gh/testspace-samples/ruby.minitest/tree/master)
-[![Run Status](https://api.shippable.com/projects/5703dabb2a8192902e1b99ce/badge?branch=master)](https://app.shippable.com/projects/5703dabb2a8192902e1b99ce)
+Example branching only: **development**
 
-
-***
-Publishing **Test Content** using www.testspace.com.
-
-[![Space Health](https://samples.testspace.com/projects/157/spaces/676/badge)](https://samples.testspace.com/projects/157/spaces/676 "Test Cases")
-[![Space Metric](https://samples.testspace.com/projects/157/spaces/676/metrics/604/badge)](https://samples.testspace.com/spaces/676/schema/Code%20Coverage "Code Coverage (lines)")
-[![Space Metric](https://samples.testspace.com/projects/157/spaces/676/metrics/605/badge)](https://samples.testspace.com/spaces/676/schema/Static%20Analysis "Static Analysis (issues)")
+* Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
 ***
 In order to run this sample you will need a host workstation that supports the [Minitest test framework](http://docs.seattlerb.org/minitest/). 
