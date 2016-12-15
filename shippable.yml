@@ -15,7 +15,7 @@
    - bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > tmp/brakeman_checkstyle.xml
    - bundle exec scss-lint --no-color --format=Stats --format=Default --out=tmp/scss-lint.txt  app/assets/stylesheets/ || true
   
-   - bundle exec rake minitest test
+   - bundle exec rake minitest test || true
 
 # Requires TESTSPACE_TOKEN environment variable. Also note that CI_REPORTS is referenced in .testspace.txt 
    - curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
