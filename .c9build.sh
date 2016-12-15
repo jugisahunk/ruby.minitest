@@ -24,4 +24,4 @@ BRANCH_NAME=`git symbolic-ref --short HEAD`
 GIT_URL=`git remote show origin -n | grep Fetch\ URL: | sed 's/.*URL: //'`
 REPO_SLUG=`echo ${GIT_URL#*github.com?} | sed 's/.git//'`
 
-CI_REPORTS=$PWD/test/reports testspace @.testspace $TESTSPACE_TOKEN/${REPO_SLUG/\//:}/${BRANCH_NAME}#c9.Build
+CI_REPORTS=$PWD/test/reports testspace @.testspace.txt $TESTSPACE_TOKEN/${REPO_SLUG/\//:}/${BRANCH_NAME}#c9.Build
