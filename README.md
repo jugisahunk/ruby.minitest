@@ -2,22 +2,22 @@
 
 ***
 
-## Ruby/Minitest sample for demonstrating Testspace 
+## Ruby/Minitest sample for demonstrating Testspace
 
-This is the sample application for the [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/). It is being used to demonstrate Testspace  publishing test content. 
-We made a few minor modifications for reporting purposes. 
+This is the sample application for the [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/). It is being used to demonstrate publishing test content to Testspace.
+We have made a few minor modifications to original project for publishing.
 
 ***
 
-Example branching only: **development**
+Example branch only: **development**
 
 * Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
 ***
-In order to run this sample you will need a host workstation that supports the [Minitest test framework](http://docs.seattlerb.org/minitest/). 
+To run this sample you will need a host workstation that supports the [Minitest test framework](http://docs.seattlerb.org/minitest/).
 
 
-Running Static Analysis: 
+Running Static Analysis:
 
 <pre>
 bundle install
@@ -25,30 +25,29 @@ bundle exec rubocop --format emacs --out tmp/rubocop.txt || true
 bundle exec brakeman -o tmp/brakeman.json
 bundle exec brakeman_translate_checkstyle_format translate --file="tmp/brakeman.json" > tmp/brakeman_checkstyle.xml
 bundle exec scss-lint --no-color --format=Stats --format=Default --out=tmp/scss-lint.txt  app/assets/stylesheets/ || true
-</pre> 
+</pre>
 
-Running Tests with Code Coverage: 
+Running Tests with Code Coverage:
 
 <pre>
 export CI_REPORTS=$PWD/test/reports
 bundle exec rake minitest test
-</pre> 
+</pre>
 
-Publishing Results using **Testspace**: 
+Publishing Results using **Testspace**:
 
 <pre>
 curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
 testspace @.testspace.txt $TESTSPACE_TOKEN/$GITHUB_ORG:$REPO_NAME/$BRANCH_NAME#$BUILD_NUMBER
-</pre> 
+</pre>
 
-Checkout the published [Test Content](https://samples.testspace.com/projects/testspace-samples:ruby.minitest). Note that the `.testspace.txt` file contains the [set of files](http://help.testspace.com/how-to:publish-content#publishing-via-content-list-file) to publish. 
+Checkout the published [Test Content](https://samples.testspace.com/projects/testspace-samples:ruby.minitest). Note that the `.testspace.txt` file contains the [set of files](http://help.testspace.com/how-to:publish-content#publishing-via-content-list-file) to publish.
 
 ***
 
-To replicate this sample: 
+To replicate this sample:
   - Setup account at www.testspace.com.
-  - Create a Environment variable called `TESTSPACE_TOKEN`
+  - Create an environment variable called `TESTSPACE_TOKEN`
      - `TESTSPACE_TOKEN` = `credentials@Your-Org-Name.testspace.com`
-     - `credentials` set to `username:password` or your [access token](http://help.testspace.com/reference:client-reference#login-credentials)
-     - For [CI use secure environment variable](http://help.testspace.com/how-to:add-to-ci) called `TESTSPACE_TOKEN`
-   
+     - Set `credentials` to `username:password` or your [access token](http://help.testspace.com/reference:client-reference#login-credentials)
+     - To [use Testspace with a CI system](http://help.testspace.com/how-to:add-to-ci-workflow), store `TESTSPACE_TOKEN` as a secure environment variable
