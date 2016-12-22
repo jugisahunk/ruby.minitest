@@ -9,11 +9,8 @@ We have made a few minor modifications to original project for publishing.
 
 ***
 
-<<<<<<< HEAD
-Example branching only: **topic**
-=======
-Example branch only: **development**
->>>>>>> development
+
+Example branch only: **topic**
 
 * Reference article: [git branching workflow](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 
