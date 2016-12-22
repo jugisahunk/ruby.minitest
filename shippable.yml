@@ -18,7 +18,7 @@
    - bundle exec rake minitest test
 
 # Requires TESTSPACE_TOKEN environment variable. Also note that CI_REPORTS is referenced in .testspace.txt
-# Both on_success and on_failure are required so the test results are published to Testspace not what happens in build.
+# Both on_success and on_failure are required so the test results are published to Testspace no matter what happens in build.
   on_success:
    - curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
    - CI_REPORTS=$PWD/test/reports testspace @.testspace.txt $TESTSPACE_TOKEN/${SHIPPABLE_REPO_SLUG/\//:}/${BRANCH}#ship.Build.${BUILD_NUMBER}
