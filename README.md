@@ -60,3 +60,5 @@ To replicate this sample:
      - `TESTSPACE_TOKEN` = `credentials@Your-Org-Name.testspace.com`
      - Set `credentials` to `username:password` or your [access token](http://help.testspace.com/reference:client-reference#login-credentials)
      - To [use Testspace with a CI system](http://help.testspace.com/how-to:add-to-ci-workflow), store `TESTSPACE_TOKEN` as a secure environment variable
+
+small change.
